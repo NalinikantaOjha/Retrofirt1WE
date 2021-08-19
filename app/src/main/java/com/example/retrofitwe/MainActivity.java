@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -52,6 +54,7 @@ String email= model.getData().getEmail();
 mTvFirstName.setText(firstName);
 mTvLastName.setText(lastName);
 mTvEmail.setText(email);
+        Glide.with(mIvAvatar).load(model.getData().getAvatar()).into(mIvAvatar);
     }
 
     @Override
